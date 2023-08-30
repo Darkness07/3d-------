@@ -7,13 +7,20 @@ body{
     box-sizing: border-box;
 }
 .main{
+    padding: 100px;
+    width: 100%;
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-    transform: rotate3d(1, 1, 0, 50deg);
-    transition: all .4s;
+    transition: all 3s ;
+    perspective: 3000px;
     gap: 50px;
+    transform: rotate3d(1, 1, 0, 0deg);
+}
+.main.active{
+    perspective: 100px;
+    /* transform: rotate3d(1,  1, 0, 50deg); */
 }
 .cube:hover {
     transform: translateZ(20px);
@@ -42,8 +49,8 @@ body{
     line-height: 150%;
     letter-spacing: 0.05em;
     box-shadow:
-        0 0 10px rgba(252, 251, 255, 0.589) inset,
-        0 0 35px rgba(255, 255, 255, 0.623);
+        0 0 10px #fcfbff96 inset,
+        0 0 25px #ffffff56;
         /* 0 0 10px rgba(51, 0, 255, 0.333) inset,
         0 0 35px rgba(51, 0, 255, 0.333); */
 
@@ -102,7 +109,4 @@ body{
 .front.active{
     width: 100%;
     height: 100%;
-}
-.main.active{
-    transform: none;
 }
